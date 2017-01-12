@@ -1,9 +1,4 @@
-#include <future>
-#include <algorithm>
-#include <iostream>
-
-using namespace std;
-
+#include "main.ih"
 
 int* quickersort(int *beg, int *end)
 {
@@ -26,19 +21,4 @@ int* quickersort(int *beg, int *end)
     rightPart.get();
 
     return leftPart.get();
-}
-
-int main()
-{
-    int* ia = new int[9]{2,4,6,2,3,7,9,1,12};
-    int iaSize = 9;
-    auto fut = async(launch::async, quickersort, ia, ia + iaSize);
-    fut.get();
-
-    for (size_t i = 0; i < 9; i++)
-    {
-        cout << ia[i] << ' ';
-    }
-    cout << '\n';
-    delete ia;
 }
