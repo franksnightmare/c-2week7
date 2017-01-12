@@ -2,6 +2,7 @@
 #include <iostream>
 #include <future>
 #include <utility>
+#include <iomanip>
 
 double lhs[4][5] = {{1, 2, 3, 4, 5},
 		    {1, 2, 3, 4, 5},
@@ -44,7 +45,7 @@ int main()
     {
 	for (int col = 0; col != 6; ++col)
 	{
-	    std::cout << fut[row][col].get() << ' ';
+	    std::cout << fut[row][col].get() << std::setw(6);
 	}
 	std::cout << '\n';
     }
