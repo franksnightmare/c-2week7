@@ -93,4 +93,17 @@ Because async always returns something we decided to return the start of the arr
 \lstinputlisting[caption = wait.cc]{src/a49/semaphore/wait.cc}
 \lstinputlisting[caption = waiters.cc]{src/a49/semaphore/waiters.cc}
 
+\section*{Exercise 50, package task design}
+We are asked to pack a function that calculates inner products of a matrix multiplication and send it to 24 detached threads.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = main.cc]{src/a50/main.cc}
+
+
+\section*{Exercise 52, std::promise design}
+This exercise is the same as 50 but using std::promise instead of package task.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = main.cc]{src/a52/main.cc}
+
 \end{document}
