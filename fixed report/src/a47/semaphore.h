@@ -7,7 +7,7 @@
 
 class Semaphore
 {
-	std::mutex d_mutex;
+	std::mutex mutable d_mutex;
 	std::condition_variable d_condition;
 	std::size_t d_nAvailable = 0;
 	

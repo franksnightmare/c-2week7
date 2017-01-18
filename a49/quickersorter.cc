@@ -1,14 +1,14 @@
 #include "main.ih"
 
-void quickerSorter(Semaphore &nextRange)
+void quickerSorter(SafeRangeQueue &nextRange)
 {
 	while (true)
 	{
 		nextRange.wait();
 		
-		if (nextRange.size() == 0 && nextRange.waiters() == nextRange.subscribers())
+		if (nextRange.empty())
 		{
-			nextRange.desubscribeThread();
+			nextRange.removeThread();
 			nextRange.notify_all();
 			return;
 		}

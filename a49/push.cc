@@ -1,6 +1,6 @@
-#include "semaphore.ih"
+#include "saferangequeue.ih"
 
-void Semaphore::push(Range range)
+void SafeRangeQueue::push(Range range)
 {
 	{
 		lock_guard<mutex> lock(d_mutex);

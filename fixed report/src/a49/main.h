@@ -4,9 +4,9 @@
 #include <future>
 #include <algorithm>
 #include <iostream>
-#include "semaphore.h"
+#include "saferangequeue.h"
 
-void quickerSort(Semaphore &nextRange);
-void quickerSorter(Semaphore &nextRange);
+void quickerSort(SafeRangeQueue &nextRange);
+void quickerSorter(SafeRangeQueue &nextRange);
 
 #endif

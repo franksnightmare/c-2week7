@@ -1,8 +1,8 @@
 #include "main.ih"
 
-void quickerSort(Semaphore &nextRange)
+void quickerSort(SafeRangeQueue &nextRange)
 {
-	Range range = nextRange.next();
+	Range range = nextRange.pop();
 	int* beg = range.beg;
 	int* end = range.end;
 	

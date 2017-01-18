@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-	Semaphore nextRange;
+	SafeRangeQueue nextRange;
 	
 	int ia[] = {2,4,6,2,3,7,9,1,12};
     size_t iaSize = 9;
@@ -11,11 +11,11 @@ int main(int argc, char **argv)
 	nextRange.push(Range(ia, ia + iaSize));
 	
 	thread sorter1(quickerSorter,
-		std::ref(nextRange.subscribeThread()));
+		std::ref(nextRange.addThread()));
 	thread sorter2(quickerSorter,
-		std::ref(nextRange.subscribeThread()));
+		std::ref(nextRange.addThread()));
 	thread sorter3(quickerSorter,
-		std::ref(nextRange.subscribeThread()));
+		std::ref(nextRange.addThread()));
 	
 	sorter1.join();
 	sorter2.join();

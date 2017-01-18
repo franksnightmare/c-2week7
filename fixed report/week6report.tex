@@ -69,7 +69,7 @@ Because async always returns something we decided to return the start of the arr
 \lstinputlisting[caption = quickersort.cc]{src/a48/quickersort.cc}
 
 \section*{Exercise 49, async quicksort}
-Here is a quicksort algorithm using async threads called quickersort.
+Here is a quicksort algorithm using async threads called \texttt{quickerSorter}s.
 Because async always returns something we decided to return the start of the array.
 
 \subsection*{Code listings}
@@ -81,17 +81,30 @@ Because async always returns something we decided to return the start of the arr
 \lstinputlisting[caption = quickersorter.cc]{src/a49/quickersorter.cc}
 \lstinputlisting[caption = quickersort.cc]{src/a49/quickersort.cc}
 
-\subsubsection*{Semaphore 2.0, please like and subscribe to our queue}
+\subsubsection*{Semaphore 3.0, now more tidy}
 \lstinputlisting[caption = semaphore.ih]{src/a49/semaphore/semaphore.ih}
 \lstinputlisting[caption = semaphore.h]{src/a49/semaphore/semaphore.h}
-\lstinputlisting[caption = desubscribethread.cc]{src/a49/semaphore/desubscribethread.cc}
-\lstinputlisting[caption = next.cc]{src/a49/semaphore/next.cc}
+\lstinputlisting[caption = done.cc]{src/a49/semaphore/done.cc}
+\lstinputlisting[caption = empty.cc]{src/a49/semaphore/empty.cc}
 \lstinputlisting[caption = notify\_all.cc]{src/a49/semaphore/notify_all.cc}
-\lstinputlisting[caption = push.cc]{src/a49/semaphore/push.cc}
-\lstinputlisting[caption = subscribers.cc]{src/a49/semaphore/subscribers.cc}
-\lstinputlisting[caption = subscribethread.cc]{src/a49/semaphore/subscribethread.cc}
 \lstinputlisting[caption = wait.cc]{src/a49/semaphore/wait.cc}
-\lstinputlisting[caption = waiters.cc]{src/a49/semaphore/waiters.cc}
+
+\subsubsection*{Subscribable}
+\lstinputlisting[caption = semaphore.ih]{src/a49/subscribable/subscribable.ih}
+\lstinputlisting[caption = semaphore.h]{src/a49/subscribable/subscribable.h}
+\lstinputlisting[caption = addthread.cc]{src/a49/subscribable/addthread.cc}
+\lstinputlisting[caption = removethread.cc]{src/a49/subscribable/removethread.cc}
+\lstinputlisting[caption = subscribers.cc]{src/a49/subscribable/subscribers.cc}
+\lstinputlisting[caption = waiters.cc]{src/a49/subscribable/waiters.cc}
+
+\subsubsection*{SafeRangeQueue}
+\lstinputlisting[caption = semaphore.ih]{src/a49/saferangequeue/saferangequeue.ih}
+\lstinputlisting[caption = semaphore.h]{src/a49/saferangequeue/saferangequeue.h}
+\lstinputlisting[caption = pop.cc]{src/a49/saferangequeue/pop.cc}
+\lstinputlisting[caption = push.cc]{src/a49/saferangequeue/push.cc}
+\lstinputlisting[caption = queueaddthread.cc]{src/a49/saferangequeue/queueaddthread.cc}
+\lstinputlisting[caption = queuedone.cc]{src/a49/saferangequeue/queuedone.cc}
+\lstinputlisting[caption = queuewait.cc]{src/a49/saferangequeue/queuewait.cc}
 
 \section*{Exercise 50, package task design}
 We are asked to pack a function that calculates inner products of a matrix multiplication and send it to 24 detached threads.
